@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; font-family: "Montserrat" !important; }
+body { margin: 0;}
+
+.mat-button-toggle-standalone, .mat-button-toggle-appearance-standard, .mat-button-toggle-group-appearance-standard, 
+.mat-button-toggle-label-content {
+    border: none;
+    padding: 0 !important; 
+}
+
+/* .material-icons, .mat-icons{
+    line-height: 0 !important;
+} */

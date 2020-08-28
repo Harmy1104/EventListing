@@ -1,0 +1,53 @@
+<!-- main container -->
+<div id="container">
+    
+    <!-- nav bar -->
+    <div id="nav">
+        <!-- category title -->
+        <h1 id="category-title">{{ category }}</h1>
+        <!-- links -->
+        <div id="links">
+            <button mat-flat-button
+                    id="nav-{{ type.category }}"
+                    class="event-item" 
+                    *ngFor="let type of eventType" 
+                    routerLink="{{ type.category }}" 
+                    (click) = "categoryClicked(type.category)">
+                {{ type.category }}
+            </button>
+        </div>
+    </div>
+
+    <section class="main-section">
+        <!-- toggle btn -->
+        <div class="toggle">
+            <mat-button-toggle-group #group="matButtonToggleGroup">
+                <mat-button-toggle checked value="list" (change)="toggleClicked(group.value)">
+                    <img src="../../assets/list.png" alt="list">
+                </mat-button-toggle>
+                <mat-button-toggle value="grid" (change)="toggleClicked(group.value)">
+                    <img src="../../assets/grid.png" alt="grid">
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+
+        <!-- event listing -->
+        <div id="card-container" class="">
+            <div [matBadge]="item.badge" matBadgePosition="before" class="card card-list" *ngFor="let item of eventList.item">
+                <div class="card-image card-list-image">
+                    <img src="{{ item.thumb_url_large }}" alt="{{ item.eventname_raw }}">
+                </div>
+                <div class="info-container info-container-list">
+                    <p class="title title-list">
+                        {{ item.eventname_raw }}
+                    </p>
+                    <p class="subtitle subtitle-list">
+                        {{ item.start_time_display.split(' ')[5] }} {{ item.start_time_display.split(' ')[6] }} - 
+                        {{ item.end_time_display.split(' ')[5] }} {{ item.end_time_display.split(' ')[6] }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
