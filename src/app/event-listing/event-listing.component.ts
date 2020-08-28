@@ -1,13 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { EventcategoriesService } from './eventcategories.service';
+import { Component, OnInit } from '@angular/core';
+import { EventcategoriesService } from '../event-listing/eventcategories.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css']
+  selector: 'app-event-listing',
+  templateUrl: './event-listing.component.html',
+  styleUrls: ['./event-listing.component.css']
 })
-export class NavigationComponent implements OnInit {
+export class EventListingComponent implements OnInit {
   eventType:any = [];
   eventList:any = {};
   category:string = 'all';

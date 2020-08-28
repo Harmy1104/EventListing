@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EventcategoriesService } from './navigation/eventcategories.service';
+import { EventcategoriesService } from './event-listing/eventcategories.service';
 import { Router } from '@angular/router';
 
 @Component({
