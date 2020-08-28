@@ -170,7 +170,7 @@ p{
 .title-list{
     color: rgb(236, 236, 236);
     align-self: center;
-    padding: 0 0 1em 0 !important;
+    padding: 0 0 calc(0.8em + (1 - 0.8) * ((100vw - 280px) / (1600 - 280))) 0 !important
     font-size: calc(4px + (22 - 4) * ((100vw - 280px) / (1600 - 280)));
     height: calc(4px + (22 - 4) * ((100vw - 280px) / (1600 - 280)));
     line-height: calc(4px + (22 - 4) * ((100vw - 280px) / (1600 - 280)));
