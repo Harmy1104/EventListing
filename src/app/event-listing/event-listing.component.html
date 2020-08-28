@@ -23,10 +23,14 @@
         <div class="toggle">
             <mat-button-toggle-group #group="matButtonToggleGroup">
                 <mat-button-toggle checked value="list" (change)="toggleClicked(group.value)">
-                    <img src="../../assets/list.png" alt="list">
+                    <!-- <img src="../assets/list.png" alt="list"> -->
+                    <mat-icon>format_list_bulleted</mat-icon>
+                    <div id="list"></div>
                 </mat-button-toggle>
                 <mat-button-toggle value="grid" (change)="toggleClicked(group.value)">
-                    <img src="../../assets/grid.png" alt="grid">
+                    <mat-icon>grid_on</mat-icon>
+                    <!-- <img src="../assets/grid.png" alt="grid"> -->
+                    <div id="grid"></div>
                 </mat-button-toggle>
             </mat-button-toggle-group>
         </div>
