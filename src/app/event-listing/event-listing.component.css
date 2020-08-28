@@ -81,8 +81,11 @@ p{
 }
 
 /* toogle btn */
-img{
-    height: calc(20px + (32 - 20) * ((100vw - 280px) / (1600 - 280)));
+.mat-icon{
+    color: white;
+    height: calc(20px + (28 - 20) * ((100vw - 280px) / (1600 - 280)));
+    width: calc(20px + (28 - 20) * ((100vw - 280px) / (1600 - 280)));
+    font-size: calc(20px + (28 - 20) * ((100vw - 280px) / (1600 - 280)));
 }
 
 .mat-button-toggle {
